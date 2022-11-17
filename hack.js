@@ -20,6 +20,12 @@ if (location['protocol'] == 'chrome-extension:')
 			let a = prompt("Enter max speed", "4");
 			app.player.maxSpeed = a
 		}
+		if (event.keyCode == 78) {
+			app.player.mode = 'jump'
+		}
+		if (event.keyCode == 79) {
+			app.player.mode = 'grapple'
+		}
 	});
 	document.addEventListener("click", function () {
 		app.player.allowJump = true
